@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #b4d5dc;
+}
+
+/*HEADER*/
+.header-container {  /*adjusts size*/
+    height: 20px;
+    width: auto;
+    padding: 20%;
+    margin:auto;
+} 
+
+.chango-regular {            /*styles h1*/
+  font-family: "Chango", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-container {
+  display: flex;                 /* activate flexbox */
+  justify-content: space-between;/* push title left & nav right */
+  align-items: center;           /* vertically center content */
+  padding: 15px 40px;            /* spacing around header */
+  background-color: #2c3e50;     /* dark background */
+  color: white;
+}
+
+/* Make nav links horizontal */
+#nav-links {
+  display: flex;
+  gap: 20px;                     /* space between links */
+}
+
+/* Styling individual links */
+#nav-links p {
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#nav-links p:hover {
+  color: #f1c40f;                /* hover effect */
+}
+
+.comic-relief-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+ 
+/*SMALL INTRODUCTION*/
+.Headline img{
+  width: 100%;          /* full width */
+  height: 950px;        /* fixed height */
+  object-fit: cover;    /* crops nicely to fit */
+  display: block;       
+  margin: 0 auto;       
+}
+
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:50;
+    font-size: 50px;
+    margin-top: 3%;
+}
+
+.Headline h2{
+  position: absolute;    /* positions text over image */
+  top: 5%;              /* vertical center */
+  left: 15%;             /* horizontal center */
+  color: white;          /* text color for contrast */
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.Headline p {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    background-color: #1f4d56;
+    width: 80%;
+    padding: 10%;
+    height: auto;         /* allow it to grow naturally */
+    text-align: center;   /* center text and buttons */
+}
+
+.Headline p button {
+    padding: 15px 30px;
+    margin: 15px 10px 0;   /* space between text & buttons */
+    border: none;
+    border-radius: 25px;
+    background-color: #f1c40f;
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Headline p button:hover {
+    background-color: #d4ac0d;
+    transform: scale(1.05);
+}
+
+.Manual {
+  display: flex;              /* put items side by side */
+  justify-content: center;    /* center them horizontally */
+  gap: 40px;                  /* space between items */
+  margin: 50px auto;
+  text-align: center;         /* center captions under images */
+}
+
+.manual-item img {
+  width: 450px;   /* adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 2%;
+}
+
+.manual-item img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.manual-item p {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.manual-item p{
+    font-family: 'Comic Neue';
+    font-size: 30px;
+    font-weight: 200;
+    color: black;
+}
+
+h3{
+    font-weight:500;
+    font-size: 60px;
+    text-align: center;
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*  Filter search bar, community feed*/
+.feed-filters {
+  display: flex;                 /* arrange items in a row */
+  justify-content: center;       /* center horizontally */
+  align-items: center;           /* align vertically */
+  gap: 20px;                     /* space between them */
+  margin: 40px auto;             /* push down + center */
+  width: fit-content;            /* shrink container to fit contents */
+}
+
+.feed-filters input,
+.feed-filters select {
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.feed-filters select option{
+  font-style: 'sans-serif';
+}
+
+.footer-content,
+.social-links{
+    text-align: center;
+    margin: 5px;
+}
+
+/*NOTIFICATION CONTAINER*/
+/* --- Notifications (toast style) --- */
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification {
+  background-color: #1f4d56;   /* matches your site colors */
+  color: #fff;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 15px 25px;
+  border-radius: 25px;         /* rounded like your buttons */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* When it shows */
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Success / Error styles */
+.notification.success {
+  background-color: #2ecc71;   /* green */
+}
+
+.notification.error {
+  background-color: #e74c3c;   /* red */
+}
+
+/*API Images*/
+#image-gallery {
+  text-align: center;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  width: 90%;
+}
+
+#image-gallery h4{
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}

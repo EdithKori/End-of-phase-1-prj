@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighbourhood Help</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts: Chango for h1, Comic Neue for nav links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chango&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chango&family=Comic+Relief:wght@400;700&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+   <body>
+
+ <!--HEADER-->
+      <div class="header-container">  
+          <h1 class="chango-regular">Neighborhood</h1>
+       
+          <div id="nav-links" class="comic-relief-regular">
+             <p>Home</p>
+             <p>Browse Request</p>
+             <p>Offer Help</p>
+             <p>About</p>
+             <p>Login</p>
+          </div>
+      </div>
+
+ <!--SMALL INTRODUCTION-->
+      <div class="Headline">
+          <img src="project img.jpg" alt="people jumping">
+          <h2>Stronger communities, one helping hand at a time...</h2>
+          
+          
+          <p>
+        Neighborhood Help is a simple platform where neighbors can connect to request or 
+        offer assistance with everyday tasks like errands, tutoring, or tool sharing 
+        making communities stronger and more supportive.
+        
+        <!-- Buttons inside the paragraph -->
+        <br><br> <!-- adds space above buttons -->
+        <button>Request Help</button>
+        <button>Offer Help</button>
+    </p>
+     </div>
+    
+<div class="Manual">
+    <div class="manual-item">
+        <img src="get help.jpg" alt="Get Help">
+        <p class="comic-relief-regular">Post or browse content</p>
+    </div>
+
+    <div class="manual-item">
+        <img src="connctneighbors.jpg" alt="Connect Neighbors">
+        <p class="comic-relief-regular">Connect with neighbors</p>
+    </div>
+
+    <div class="manual-item">
+        <img src="support.jpg" alt="Support">
+        <p class="comic-relief-regular">Get support</p>
+    </div>
+</div>
+
+ 
+ <!--COMMUNITY FEED (Mini Section) -->
+  <section id="community-feed">
+            <h3 class="dm-serif-text-regular">Community Feed</h3>
+
+ <!-- Filter / Search Bar -->
+  <div class="feed-filters">
+     <input type="text" placeholder="Search requests...">
+
+             <select>
+                  <option value="">Category</option>
+                  <option value="errands">Errands</option>
+                  <option value="tutoring">Tutoring</option>
+                  <option value="tools">Tools</option>
+             </select>
+
+      <select>
+          <option value="">Urgency</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+     </select>
+  </div>
+
+<!-- New Map Section -->
+  <div id="map"></div>
+
+</section>
+
+<!--API Images-->
+<section id="image-gallery">
+  <h4>Community Moments</h4>
+  <div class="gallery"></div>
+</section>
+
+<!--FOOTER-->
+<footer id="last-footer">
+    <div class="footer-content">
+        <p>© Neighborhood</p>
+
+        <div class="social-links">
+             <a href="https://facebook.com" target="_blank">Facebook</a> 
+             <a href="https://twitter.com" target="_blank">Twitter</a> 
+             <a href="https://instagram.com" target="_blank">Instagram</a> 
+             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
