@@ -50,7 +50,7 @@ document.querySelectorAll("#nav-links p").forEach(link => {
 });
 
 // Fetch requests from db.json and display them
-fetch("http://localhost:3000/requests")
+fetch("https://raw.githubusercontent.com/EdithKori/EOPhase-1-dbjson-file/refs/heads/master/db.json")
   .then(res => res.json())
   .then(requests => {
     const feed = document.getElementById("community-feed");
