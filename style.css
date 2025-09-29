@@ -236,38 +236,94 @@ h3{
   background-color: #e74c3c;   /* red */
 }
 
-/*API Images*/
-#image-gallery {
-  text-align: center;
-  margin: 60px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  width: 90%;
+/* ✨ NEW FEATURE: Back-to-top button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 18px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none; /* hidden by default */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#image-gallery h4{
-  font-size: 40px;
-  margin-bottom: 20px;
+#backToTop:hover {
+  background-color: #f1c40f;
+  color: #2c3e50;
+  transform: scale(1.1);
+}
+
+/* ✨ NEW FEATURE: Request cards styling */
+.request-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.request-card:hover {
+  transform: scale(1.02);
+}
+
+/* ✨ NEW FEATURE: Dark mode styles */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+}
+
+body.dark-mode .header-container {
+  background-color: #111;
+}
+
+body.dark-mode .request-card {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+#darkModeToggle {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  padding: 12px 20px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#darkModeToggle:hover {
+  background: #f1c40f;
   color: #2c3e50;
 }
 
-.gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+/* ✨ Toast notification styles */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2ecc71;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.5s;
+  z-index: 9999;
 }
-
-.gallery img {
-  width: 250px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+.toast.error {
+  background: #e74c3c;
 }
-
-.gallery img:hover {
-  transform: scale(1.05);
+.toast.fade-out {
+  opacity: 0;
 }

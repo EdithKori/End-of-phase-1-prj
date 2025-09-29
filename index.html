@@ -72,6 +72,11 @@
 
  <!-- Filter / Search Bar -->
   <div class="feed-filters">
+
+
+     <!-- container for requests -->
+  <div id="feed"></div>
+
      <input type="text" placeholder="Search requests...">
 
              <select>
@@ -94,11 +99,6 @@
 
 </section>
 
-<!--API Images-->
-<section id="image-gallery">
-  <h4>Community Moments</h4>
-  <div class="gallery"></div>
-</section>
 
 <!--FOOTER-->
 <footer id="last-footer">
@@ -113,6 +113,17 @@
         </div>
     </div>
 </footer>
+
+
+<!-- ✨ NEW FEATURE: Notification container (for toast messages) -->
+<div id="notification-container"></div>
+
+<!-- ✨ NEW FEATURE: Back-to-top button -->
+<button id="backToTop">⬆ Back to Top</button>
+
+<!-- ✨ NEW FEATURE: Dark mode toggle -->
+<button id="darkModeToggle">🌙 Dark Mode</button>
+
 
 <script src="script.js"></script>
 </body>
